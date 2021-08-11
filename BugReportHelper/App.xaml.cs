@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
+using BugReportHelper.Service;
 
 namespace BugReportHelper
 {
@@ -17,7 +18,7 @@ namespace BugReportHelper
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<ISthService, SthsService>();
         }
     }
 }
